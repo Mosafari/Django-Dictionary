@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
-from  googletrans import Translator
+from  googletrans import Translator #--> does't work : fixed -> in pre-released version
+# from translate import Translator
 
 # Create your views here.
 def home(request):
