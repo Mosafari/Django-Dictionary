@@ -16,19 +16,33 @@
             {% csrf_token %}
             <div class="form-row mt-4">
                <div class="col">
-                  <textarea type="text" name="txt" class="form-control" placeholder="Enter Your Text" rows="5" required="required"></textarea>
+                  <select id="inputState" class="form-control" name="src">
+                     <option selected value="en">English</option>
+                     <option value="ar">Arabic</option>
+                     <option value="es">Spanish</option>
+                     <option value="fr">Frensh</option>
+                     <option value="fa">Persian</option>
+                     <option value="de">German</option>
+                     <option value="zh-cn">Chinese</option>
+                  </select>
                </div>
+               to 
                <div class="col">
                   <select id="inputState" class="form-control" name="lang">
                      <option selected value="en">English</option>
                      <option value="ar">Arabic</option>
                      <option value="es">Spanish</option>
+                     <option value="fa">Persian</option>
                      <option value="fr">Frensh</option>
                      <option value="de">German</option>
                      <option value="zh-cn">Chinese</option>
                   </select>
                </div>
             </div>
+            <div class="col">
+               <textarea type="text" name="txt" class="form-control" placeholder="Enter Your Text" rows="5" required="required"></textarea>
+            </div>
+               
             <button type="submit" class="btn btn-primary mt-2">Translate</button>
          </form>
          <p class="mt-4">{{result}}</p>
