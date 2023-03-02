@@ -47,6 +47,30 @@
          </form>
          <p class="mt-4">{{result}}</p>
       </div>
+      {% if records %}
+      <div>
+         <table>
+            <tr>
+            <th>ID</th>
+            <th>Text</th>
+            <th>Meaning</th>
+            <th>Src</th>
+            <th>Dest</th>
+            <th>Pronunciation</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+            <td>{{record.id}}</td>
+            <td>{{record.word}}</td>
+            <td>{{record.meaning}}</td>
+            <td>{{record.src}}</td>
+            <td>{{record.targetlang}}</td>
+            <td>{{record.pronunciation}}</td>
+            </tr>
+            {% endfor %}
+         </table>
+      </div>
+      {% endif %}
    </body>
 </html>
 

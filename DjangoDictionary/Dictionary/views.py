@@ -27,4 +27,5 @@ def home(request):
         obj = Dictionary.objects.create(word=txt, meaning=tr.text, targetlang=tr.dest, pronunciation=p, src=tr.src)
         obj.save()
         print(tr,tr.src)
-        return HttpResponse(render(request, 'home.html', {"result":tr.text}), status=200)
+        records = Dictionary.objects.all()
+        return HttpResponse(render(request, 'home.html', {"result":tr.text, "records" : records}), status=200)
