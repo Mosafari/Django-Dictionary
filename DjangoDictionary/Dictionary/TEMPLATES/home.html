@@ -4,6 +4,23 @@
    <head>
       <title>Translate app</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <style>
+         table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+          
+          tr:nth-child(even) {
+            background-color: #dddddd;
+          }
+         </style>
    </head>
    <style>
       p {font-size: 20px} 
@@ -40,15 +57,15 @@
                </div>
             </div>
             <div class="col">
-               <textarea type="text" name="txt" class="form-control" placeholder="Enter Your Text" rows="5" required="required"></textarea>
+               <textarea type="text" name="txt" class="form-control" placeholder="Enter Your Text" rows="5" required="required" ></textarea>
             </div>
                
-            <button type="submit" class="btn btn-primary mt-2">Translate</button>
+           <div align="center"> <button type="submit" class="btn btn-primary mt-2" >Translate</button></div>
          </form>
-         <p class="mt-4">{{result}}</p>
+         <p class="mt-4" align="center">{{result}}</p>
       </div>
       {% if records %}
-      <div>
+      <div class="container">
          <table>
             <tr>
             <th>ID</th>
@@ -71,6 +88,9 @@
          </table>
       </div>
       {% endif %}
+      <footer>
+         <p align="center">Django Dictionary</p>
+       </footer>
    </body>
 </html>
 
