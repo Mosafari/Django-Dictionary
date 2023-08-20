@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1^z6x1=g=$ml$hxo@te)roae@yz-2%sa)-$076m%%gw#)@78l*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -60,7 +60,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
-        'DIRS': [os.path.join(BASE_DIR, 'TEMPLATES')],
+        'DIRS': [os.path.join(BASE_DIR, 'Templates')],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',

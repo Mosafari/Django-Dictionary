@@ -5,6 +5,12 @@ from  googletrans import Translator #--> does't work : fixed -> in pre-released 
 
 from .models import Dictionary
 
+
+# Error handling
+def handler404(request,exceptin):
+    print("here" +request.GET)
+    return render(request, '404.html', status=404)
+
 # Create your views here.
 def home(request):
     if request.method == 'GET':
